@@ -1,7 +1,10 @@
 import Image from 'next/image'
+import Header from '@/components/Header'
 
 export default function Home() {
   return (
-    <div>Bad movies</div>
+    <div>
+      <Header />
+    </div>
   )
 }
