@@ -21,7 +21,7 @@ export default function MoviesList() {
   }, []);
 
   return (
-    <div>
+    <div className="flex flex-col items-center">
       {movies.map((movie, id) => (
         <MovieItem
           key={id}
