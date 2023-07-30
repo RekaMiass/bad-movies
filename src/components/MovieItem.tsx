@@ -1,5 +1,6 @@
 export interface MovieItemProps {
-  // id: string,
+  id: string;
+  type: string;
   cover: string;
   name: string;
   date: string;
