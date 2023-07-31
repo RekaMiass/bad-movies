@@ -8,7 +8,6 @@ import Link from "next/link";
 
 export default function MoviesList() {
   const { movies } = useContext(MoviesContext) || { movies: [] };
-  console.log(movies)
   const [selectedType, setSelectedType] = useState<{
     value: string;
     label: string;
@@ -27,7 +26,6 @@ export default function MoviesList() {
     );
     setFilteredMovies(filtered);
   }, [movies, selectedType, selectedYear]);
-  // }, []);
 
   const typeOptions = [
     { value: "movie", label: "Фильмы" },
@@ -70,7 +68,8 @@ export default function MoviesList() {
       </div>
       <div className="flex flex-col items-center">
         {filteredMovies.map((movie) => (
-          // <Link href={`/movie/${movie.id}`}>
+          <Link href={`/movie/${movie.id}`}>
+          {/* // <Link href="/movie"> */}
             <MovieItem
               key={movie.id}
               cover={movie.cover}
@@ -80,7 +79,7 @@ export default function MoviesList() {
               type={""}
               id={""}
             />
-          // </Link>
+          </Link>
         ))}
       </div>
     </div>

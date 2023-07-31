@@ -1,7 +1,7 @@
 {
   "movies": [
     {
-      "id": "1",
+      "id": "0",
       "name": "Птицекалипсис: Шок и трепет",
       "date": "2010",
       "cover": "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/eb791f4b-8872-434d-839f-b2e154c205b2/orig",
@@ -27,7 +27,7 @@
       ]
     },
     {
-      "id": "2",
+      "id": "1",
       "name": "Блюбарелла: Супервумен",
       "date": "2010",
       "cover": "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/c9c798b0-a6ac-4d0f-8876-0af4cc8a443f/orig",
@@ -53,7 +53,7 @@
       ]
     },
     {
-      "id": "3",
+      "id": "2",
       "name": "Монстры",
       "date": "1993",
       "cover": "https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/d47a0eec-1a40-49d3-aa78-2dc9d8664b52/orig",
@@ -79,7 +79,7 @@
       ]
     },
     {
-      "id": "4",
+      "id": "3",
       "name": "Черная роза",
       "date": "2014",
       "cover": "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/b713a504-dc7c-437a-8406-bb6fe088d58b/orig",
@@ -105,7 +105,7 @@
       ]
     },
     {
-      "id": "5",
+      "id": "4",
       "name": "Теоретики",
       "date": "2009",
       "cover": "https://www.kino-teatr.ru/movie/posters/big/2/151142.jpg",
@@ -131,7 +131,7 @@
       ]
     },
     {
-      "id": "6",
+      "id": "5",
       "name": "Как я встретил вашу маму",
       "date": "2010",
       "cover": "https://www.kino-teatr.ru/movie/posters/big/6/82396.jpg",
@@ -157,7 +157,7 @@
       ]
     },
     {
-      "id": "7",
+      "id": "6",
       "name": "Анастасия",
       "date": "2020",
       "cover": "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/ede21ee1-073a-4175-b670-f32c6d77602d/orig",
@@ -183,7 +183,7 @@
       ]
     },
     {
-      "id": "8",
+      "id": "7",
       "name": "Мак и я",
       "date": "1988",
       "cover": "https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/42c51e0c-3517-4073-906a-b9af46608529/orig",
@@ -209,7 +209,7 @@
       ]
     },
     {
-      "id": "9",
+      "id": "8",
       "name": "Комната",
       "date": "2003",
       "cover": "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/20e653a3-1a9d-48d7-9728-b28f565efcd6/orig",
@@ -235,7 +235,7 @@
       ]
     },
     {
-      "id": "10",
+      "id": "9",
       "name": "Гуманоиды в Королёве",
       "date": "2008",
       "cover": "https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/b6221a94-752b-4599-b193-fa4f4929b685/orig",

@@ -3,23 +3,18 @@ import Header from "@/components/Header";
 import MoviesList from "@/components/MoviesList";
 import MovieCard from "@/components/MovieCard";
 import Link from "next/link";
-import HomePage from "@/components/HomePage";
 import MoviePage from "@/components/MoviePage";
 
-export default function Home() {
+export default function Page() {
   return (
-    <ul>
-      <li>
+    <div>
         {/* <Link href="/"> */}
-          <HomePage />
+          <MoviesList />
         {/* </Link> */}
-      </li>
-      <li>
-        {/* <Link href="/movie/:id">
+        {/* <Link href="/movie">
           <MoviePage />
         </Link> */}
-      </li>
-    </ul>
+    </div>
   );
 }
 

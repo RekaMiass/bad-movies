@@ -1,25 +1,30 @@
-import Header from "./Header";
+"use client";
+
 import MovieCard from "./MovieCard";
-// import { useRouter } from "next/router";
+import { useContext } from "react";
+import { MoviesContext } from "@/components/MoviesContext";
+import { useParams } from "next/navigation";
 
 export default function MoviePage() {
-// const router = useRouter();
-// const { id } = router.query;
+  const { movies } = useContext(MoviesContext) || { movies: [] };
+  const params = useParams();
+  const id = params ? params.id : null;
+  const movieId = parseInt(id as string, 10);
+  const movie = movies[movieId];
 
-    return (
-        <div>
-            <Header />
-            {/* <MovieCard 
-                id={id}
-                cover={cover}
-                name={name}
-                director={director}
-                scenario={scenario}
-                producer={producer}
-                actors={actors}
-                fullDescription={fullDescription}
-                // screens={screens}
-            /> */}
-        </div>
-    )
+  return (
+    <div>
+      <MovieCard
+        id={movie.id}
+        cover={movie.cover}
+        name={movie.name}
+        director={movie.director}
+        scenario={movie.scenario}
+        producer={movie.producer}
+        actors={movie.actors}
+        fullDescription={movie.fullDescription}
+        // screens={screens}
+      />
+    </div>
+  );
 }
