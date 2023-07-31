@@ -1,11 +1,14 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import MovieItem, { MovieItemProps } from "./MovieItem";
+import { MoviesContext } from "@/components/MoviesContext";
 import Filters from "./Filters";
+import Link from "next/link";
 
 export default function MoviesList() {
-  const [movies, setMovies] = useState<MovieItemProps[]>([]);
+  const { movies } = useContext(MoviesContext) || { movies: [] };
+  console.log(movies)
   const [selectedType, setSelectedType] = useState<{
     value: string;
     label: string;
@@ -17,38 +20,26 @@ export default function MoviesList() {
   const [filteredMovies, setFilteredMovies] = useState<MovieItemProps[]>([]);
 
   useEffect(() => {
-    async function getMovies() {
-      try {
-        const response = await fetch("http://localhost:3001/movies");
-        const data = await response.json();
-        setMovies(data);
-      } catch (error) {
-        console.error(error);
-      }
-    }
-    getMovies();
-  }, []);
-
-  useEffect(() => {
     const filtered = movies.filter(
-      (movie) =>
+      (movie: { type: string; date: string; }) =>
         (!selectedType || movie.type === selectedType.value) &&
         (!selectedYear || movie.date === selectedYear.value)
     );
     setFilteredMovies(filtered);
   }, [movies, selectedType, selectedYear]);
+  // }, []);
 
   const typeOptions = [
     { value: "movie", label: "Фильмы" },
     { value: "series", label: "Сериалы" },
   ];
 
-  const yearOptions = Array.from(
-    new Set(movies.map((movie) => movie.date))
-  ).sort().map((year) => ({
-    value: year,
-    label: year,
-  }));
+  const yearOptions = Array.from(new Set(movies.map((movie: { date: any; }) => movie.date)))
+    .sort()
+    .map((year) => ({
+      value: year,
+      label: year,
+    }));
 
   const resetFilters = () => {
     setSelectedType(null);
@@ -70,19 +61,26 @@ export default function MoviesList() {
           setSelectedOption={setSelectedYear}
           label="Выбрать год"
         />
-        <button className="w-20 text-sm leading-4 border-2 rounded-md" onClick={resetFilters}>Сбросить фильтры</button>
+        <button
+          className="w-20 text-sm leading-4 border-2 rounded-md"
+          onClick={resetFilters}
+        >
+          Сбросить фильтры
+        </button>
       </div>
       <div className="flex flex-col items-center">
         {filteredMovies.map((movie) => (
-          <MovieItem
-            key={movie.id}
-            cover={movie.cover}
-            name={movie.name}
-            date={movie.date}
-            shortDescription={movie.shortDescription}
-            type={""}
-            id={""}
-          />
+          // <Link href={`/movie/${movie.id}`}>
+            <MovieItem
+              key={movie.id}
+              cover={movie.cover}
+              name={movie.name}
+              date={movie.date}
+              shortDescription={movie.shortDescription}
+              type={""}
+              id={""}
+            />
+          // </Link>
         ))}
       </div>
     </div>
