@@ -13,7 +13,7 @@ export default function MoviePage() {
   const movie = movies[movieId];
 
   return (
-    <div>
+    <div className="w-3/4 mx-auto mt-10">
       <MovieCard
         id={movie.id}
         cover={movie.cover}
@@ -23,7 +23,7 @@ export default function MoviePage() {
         producer={movie.producer}
         actors={movie.actors}
         fullDescription={movie.fullDescription}
-        // screens={screens}
+        screens={movie.screens}
       />
     </div>
   );

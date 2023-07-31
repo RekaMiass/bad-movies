@@ -66,10 +66,9 @@ export default function MoviesList() {
           Сбросить фильтры
         </button>
       </div>
-      <div className="flex flex-col items-center">
+      <div>
         {filteredMovies.map((movie) => (
-          <Link href={`/movie/${movie.id}`}>
-          {/* // <Link href="/movie"> */}
+          <Link className="flex flex-col items-center" href={`/movie/${movie.id}`}>
             <MovieItem
               key={movie.id}
               cover={movie.cover}
