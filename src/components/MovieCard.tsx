@@ -11,7 +11,7 @@ interface MovieCardProps {
   producer: string;
   actors: string[];
   fullDescription: string;
-  screens: string[]
+  screens: string[];
 }
 
 export default function MovieCard({
@@ -22,15 +22,15 @@ export default function MovieCard({
   producer,
   actors,
   fullDescription,
-  screens
+  screens,
 }: MovieCardProps) {
   const { movies } = useContext(MoviesContext) || { movies: [] };
   return (
     <div className="flex flex-col">
-      <div className="flex gap-x-5">
-        <img className="h-100 w-60" src={cover} alt="" />
+      <div className="sm:flex sm:gap-x-5">
+        <img className="mx-auto sm:mx-0 h-70 w-40 sm:h-100 sm:w-60" src={cover} alt="" />
         <div>
-          <h1 className="text-4xl font-bold uppercase mb-5">{name}</h1>
+          <h1 className="text-center sm:text-start text-2xl sm:text-4xl font-bold uppercase mb-5">{name}</h1>
           <p>
             <span className="text-orange-800">Режиссёр: </span>
             {director}

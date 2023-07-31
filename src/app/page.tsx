@@ -8,13 +8,7 @@ import MoviePage from "@/components/MoviePage";
 export default function Page() {
   return (
     <div>
-        {/* <Link href="/"> */}
-          <MoviesList />
-        {/* </Link> */}
-        {/* <Link href="/movie">
-          <MoviePage />
-        </Link> */}
+      <MoviesList />
     </div>
   );
 }
-

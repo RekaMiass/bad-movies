@@ -35,7 +35,6 @@ export const MoviesProvider = ({ children }: MoviesProviderProps) => {
       try {
         const response = await fetch("http://localhost:3001/movies");
         const data = await response.json();
-        console.log(data);
         setMovies(data);
       } catch (error) {
         console.error(error);

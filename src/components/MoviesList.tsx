@@ -20,7 +20,7 @@ export default function MoviesList() {
 
   useEffect(() => {
     const filtered = movies.filter(
-      (movie: { type: string; date: string; }) =>
+      (movie: { type: string; date: string }) =>
         (!selectedType || movie.type === selectedType.value) &&
         (!selectedYear || movie.date === selectedYear.value)
     );
@@ -32,7 +32,9 @@ export default function MoviesList() {
     { value: "series", label: "Сериалы" },
   ];
 
-  const yearOptions = Array.from(new Set(movies.map((movie: { date: any; }) => movie.date)))
+  const yearOptions = Array.from(
+    new Set(movies.map((movie: { date: any }) => movie.date))
+  )
     .sort()
     .map((year) => ({
       value: year,
@@ -45,8 +47,8 @@ export default function MoviesList() {
   };
 
   return (
-    <div className="flex flex-col mt-5">
-      <div className="flex ml-[13%] gap-x-5">
+    <div className="flex flex-col mt-2">
+      <div className="flex mx-5 sm:mx-[13%] gap-x-3 sm:gap-x-5 flex-wrap">
         <Filters
           options={typeOptions}
           selectedOption={selectedType}
@@ -60,7 +62,7 @@ export default function MoviesList() {
           label="Выбрать год"
         />
         <button
-          className="w-20 text-sm leading-4 border-2 rounded-md"
+          className="w-20 text-sm leading-4 border-2 rounded-md mt-2"
           onClick={resetFilters}
         >
           Сбросить фильтры
@@ -68,7 +70,10 @@ export default function MoviesList() {
       </div>
       <div>
         {filteredMovies.map((movie) => (
-          <Link className="flex flex-col items-center" href={`/movie/${movie.id}`}>
+          <Link
+            className="flex flex-col items-center"
+            href={`/movie/${movie.id}`}
+          >
             <MovieItem
               key={movie.id}
               cover={movie.cover}

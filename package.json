@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "stubapi": "json-server -w db.json --port 3001",
+    "stubapi": "json-server db.json --port 3001",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -27,6 +27,7 @@
     "@types/react-slick": "^0.23.10",
     "json-server": "^0.17.3",
     "react-select": "^5.7.4",
-    "react-slick": "^0.29.0"
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1"
   }
 }

@@ -14,7 +14,7 @@ export default function Filters({
   label,
 }: FilterProps) {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center mt-2">
       <h2 className="w-20 text-sm leading-4">{label}:</h2>
       <ReactSelect
         options={options}
