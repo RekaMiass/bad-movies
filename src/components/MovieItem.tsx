@@ -14,7 +14,7 @@ export default function MovieItem({
   shortDescription,
 }: MovieItemProps) {
   return (
-    <div className="container w-11/12 sm:w-3/4 flex items-start gap-x-3 sm:gap-x-5 py-5 border-b-2">
+    <div className="container w-11/12 sm:w-3/4 sm:flex items-start gap-x-3 sm:gap-x-5 py-5 border-b-2">
       <img className="float h-70 w-40" src={cover} alt="" loading="lazy" />
       <div className="flex flex-col">
         <h2 className="text-xl sm:text-2xl font-semibold">{name}</h2>
