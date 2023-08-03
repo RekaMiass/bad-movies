@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Slider from "react-slick";
 import { useState } from "react";
 
@@ -30,12 +31,14 @@ export default function Carousel({ screens }: CaruselProps) {
     <div>
       <Slider {...settings}>
         {screens.map((screen: string, id) => (
-          <img
+          <Image
             className="object-cover h-45 sm:h-60 mt-5 px-3 cursor-zoom-in"
             src={screen}
-            alt=""
             key={id}
             onClick={() => openModal(screen)}
+            width={300}
+            height={300}
+            alt={""}
           />
         ))}
       </Slider>
@@ -44,11 +47,13 @@ export default function Carousel({ screens }: CaruselProps) {
           className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-75 flex items-center justify-center"
           onClick={closeModal}
         >
-          <img
+          <Image
             className="max-w-full max-h-full"
             src={selectedImage}
-            alt=""
             onClick={(e) => e.stopPropagation()}
+            width={600}
+            height={600}
+            alt={""}
           />
         </div>
       )}

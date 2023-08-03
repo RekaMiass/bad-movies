@@ -73,6 +73,7 @@ export default function MoviesList() {
           <Link
             className="flex flex-col items-center"
             href={`/movie/${movie.id}`}
+            key={movie.id}
           >
             <MovieItem
               key={movie.id}
