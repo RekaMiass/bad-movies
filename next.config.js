@@ -10,13 +10,13 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'kino-teatr.ru',
+        hostname: 'www.kino-teatr.ru',
         port: '',
         pathname: '/**',
       },
       {
         protocol: 'https',
-        hostname: 'kino-teatr.ru',
+        hostname: 'www.kino-teatr.ru',
         port: '',
         pathname: '/movie/**',
       },
@@ -28,7 +28,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'yaom.ru',
+        hostname: 'www.yaom.ru',
         port: '',
         pathname: '/movie/**',
       },
