@@ -90,3 +90,24 @@ export default function MoviesList() {
     </div>
   );
 }
+
+export async function getServerSideProps() {
+  try {
+    const response = await fetch('http://localhost:4000/movies');
+    const data = await response.json();
+
+    return {
+      props: {
+        movies: data,
+      },
+    };
+  } catch (error) {
+    console.error(error);
+
+    return {
+      props: {
+        movies: [],
+      },
+    };
+  }
+}
