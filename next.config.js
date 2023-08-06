@@ -16,6 +16,12 @@ const nextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'www.yaom.ru',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
         hostname: 'www.kino-teatr.ru',
         port: '',
         pathname: '/movie/**',

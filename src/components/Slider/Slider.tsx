@@ -1,3 +1,4 @@
+import "./slider.css";
 import Image from "next/image";
 import Slider from "react-slick";
 import { useState } from "react";
@@ -25,6 +26,7 @@ export default function Carousel({ screens }: CaruselProps) {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    // slickNext: <button style={{ color: "green" }}>Next</button>,
   };
 
   return (

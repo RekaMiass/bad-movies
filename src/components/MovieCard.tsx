@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Carousel from "./Slider";
+import Carousel from "./Slider/Slider";
 import { useContext } from "react";
 import { MoviesContext } from "./MoviesContext";
 
