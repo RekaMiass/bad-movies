@@ -33,7 +33,7 @@ export const MoviesProvider = ({ children }: MoviesProviderProps) => {
   useEffect(() => {
     async function getMovies() {
       try {
-        const response = await fetch("http://localhost:4000/movies");
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/movies`);
         const data = await response.json();
         setMovies(data);
       } catch (error) {
