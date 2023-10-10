@@ -23,7 +23,6 @@ export default function MovieItem({
         width={200}
         height={200}
         alt={""}
-        loading="lazy"
       />
       <div className="flex flex-col">
         <h2 className="text-xl sm:text-2xl font-semibold">{name}</h2>
